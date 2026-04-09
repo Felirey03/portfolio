@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  Plataforma estática, repositorio de proyectos y blog central para mis operaciones continuas en el fascinante mundo del desarrollo de software (Backend, Python y Odoo Integration).
+  Plataforma estática, repositorio de proyectos y blog central para mis operaciones continuas en el mundo del desarrollo de software (Backend, Python y Odoo Integration).
 </p>
 
 <p align="center">
