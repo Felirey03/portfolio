@@ -1,0 +1,143 @@
+---
+interface Props {
+  images: string[];
+}
+const { images } = Astro.props;
+---
+<div class="gallery-wrapper">
+  <div class="gallery-grid">
+    {images.map((src, index) => (
+      <img src={src} alt={`Vista del proyecto ${index + 1}`} class="gallery-image" data-lightbox="true" loading="lazy" />
+    ))}
+  </div>
+</div>
+
+<dialog id="lightbox" class="lightbox-modal">
+  <button id="lightbox-close" aria-label="Cerrar">&times;</button>
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="Vista ampliada" />
+  </div>
+</dialog>
+
+<style>
+  .gallery-wrapper {
+    margin: 3rem 0;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  .gallery-image {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: zoom-in;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid var(--border-color);
+  }
+  .gallery-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+  
+  .lightbox-modal {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+  .lightbox-modal::backdrop {
+    background: rgba(13, 15, 18, 0.95);
+    backdrop-filter: blur(8px);
+  }
+  .lightbox-modal[open] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #lightbox-img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  }
+  
+  #lightbox-close {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 10;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #lightbox-close:hover {
+    background: rgba(255,255,255,0.2);
+  }
+</style>
+
+<script>
+  // Script se ejecuta una vez por página (Astro Islands)
+  const modals = document.querySelectorAll('.lightbox-modal');
+  
+  modals.forEach(modalElement => {
+    const modal = modalElement as HTMLDialogElement;
+    const modalImg = modal.querySelector('#lightbox-img') as HTMLImageElement;
+    const closeBtn = modal.querySelector('#lightbox-close');
+    
+    // Abrir modal
+    const galleryImages = document.querySelectorAll('[data-lightbox="true"]');
+    galleryImages.forEach((img) => {
+      img.addEventListener('click', (e) => {
+        const target = e.target as HTMLImageElement;
+        if(modalImg && modal) {
+          modalImg.src = target.src;
+          modal.showModal();
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    // Cerrar modal
+    if(closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        modal.close();
+        document.body.style.overflow = '';
+      });
+    }
+
+    // Cerrar al clickear afuera de la imagen
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal || (e.target as HTMLElement).classList.contains('lightbox-content')) {
+        modal.close();
+        document.body.style.overflow = '';
+      }
+    });
+  });
+</script>

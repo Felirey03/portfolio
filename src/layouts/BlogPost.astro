@@ -1,0 +1,34 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+	<article class="prose">
+		<a href="/blog" style="font-size: 0.9rem; color: var(--text-muted);">← Volver a todos los artículos</a>
+		<h1 style="color: var(--text-main); font-size: 2.2rem; margin-top: 1rem; margin-bottom: 0.5rem;">{title}</h1>
+		<div style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">
+			<time datetime={pubDate.toISOString()}>
+				{pubDate.toLocaleDateString('es-ES', {
+					year: 'numeric',
+					month: 'short',
+					day: 'numeric',
+				})}
+			</time>
+			{updatedDate && (
+				<span style="font-style: italic;">
+					(Actualizado el {updatedDate.toLocaleDateString('es-ES', {
+						year: 'numeric',
+						month: 'short',
+						day: 'numeric',
+					})})
+				</span>
+			)}
+		</div>
+		<slot />
+	</article>
+</BaseLayout>
