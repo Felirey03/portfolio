@@ -6,6 +6,6 @@ pubDate: "2026-04-09"
 
 # Bienvenidos a mi Blog
 
-Este es el primer post dentro de la colección de Astro. A partir de aquí iré subiendo artículos y reflexiones sobre el desarrollo Backend, Python, Odoo y mis experiencias en el fascinante mundo del desarrollo de software.
+Este es el primer post dentro de la colección de Astro. A partir de acá iré subiendo artículos y reflexiones sobre el desarrollo Backend, Python, Odoo y mis experiencias.
 
 **¡Espero que disfruten del contenido!**
