@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog')).sort(
@@ -38,6 +39,9 @@ const projects = (await getCollection('projects')).sort(
 			</a>
 		</div>
 	</section>
+
+
+
 
 	<section id="projects">
 		<h2 class="section-title">Proyectos Destacados</h2>
