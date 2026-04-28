@@ -13,7 +13,7 @@ images:
 
 ## Sobre el Proyecto
 
-Este dashboard fue creado para proveer a la mesa de gerencia una manera rápida, concisa y en tiempo real de observar los KPIs fundamentales de la empresa. En lugar de procesar reportes manuales, el sistema agrega la información y la expone intuitivamente.
+Panel de visualización en tiempo real desarrollado sobre Odoo para exponer KPIs clave a nivel gerencial. El sistema agrega datos de múltiples fuentes y los presenta de forma clara, eliminando la necesidad de reportes manuales. Foco técnico en manejo de streams de datos y eficiencia del backend bajo carga.
 
 ## Retos Técnicos
 

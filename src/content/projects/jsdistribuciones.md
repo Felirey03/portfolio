@@ -13,10 +13,4 @@ images:
 
 ## Sobre el Proyecto
 
-Una herramienta completa orientada a mejorar la eficiencia logística y automatizar el flujo de trabajo del personal de distribución. Fue estructurada prestando atención a la solidez del backend, construyendo endpoints resilientes y ágiles que actúan en la operativa crítica diaria.
-
-## Desarrollo Backend
-
-- Desarrollo de la API principal y mapeo de la base de datos empresarial.
-- Optimización de consultas para reducción de latencia.
-- Integración de validaciones de seguridad para usuarios del sistema.
+Sistema backend desarrollado para digitalizar por completo la operación de una distribuidora real. Reemplazó procesos manuales en papel con una plataforma centralizada para gestión de stock, clientes y remitos. Construido con Python, Flask y SQLAlchemy, con foco en endpoints robustos y consultas optimizadas para soportar la operativa diaria.
