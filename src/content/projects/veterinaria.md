@@ -6,7 +6,6 @@ isExternal: false
 order: 2
 githubLink: "https://github.com/Felirey03/veterinariaOdoo"
 images:
-  - "/projects/veterinaria-1.png"
   - "/projects/veterinaria-2.png"
   - "/projects/veterinaria-3.png"
   - "/projects/veterinaria-4.png"
