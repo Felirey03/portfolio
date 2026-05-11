@@ -16,7 +16,7 @@ const { title, description, tags, link, isExternal = false, dataIndex, isFeature
   href={link}
   target={isExternal ? "_blank" : undefined}
   rel={isExternal ? "noopener noreferrer" : undefined}
-  class="project-card-link"
+  class={`project-card-link ${isFeatured ? 'featured' : ''}`}
 >
   <article class={`project-card ${isFeatured ? 'featured' : ''}`} data-index={dataIndex}>
     <div class="project-card-header">

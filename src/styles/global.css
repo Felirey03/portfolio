@@ -1260,33 +1260,79 @@ footer {
   margin-bottom: 5rem;
 }
 
-.project-card.featured {
+.project-card-link.featured {
   grid-column: 1 / -1;
-  display: flex !important;
-  flex-direction: row !important;
-  min-height: 420px;
-  border-left: 6px solid var(--accent);
 }
 
-.project-card.featured .project-card-header {
-  padding: 2.5rem 2.5rem 1rem 2.5rem;
+.project-card.featured {
+  padding: 3.5rem;
+  min-height: 480px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  border-width: 3px;
+  border-color: var(--accent);
+  background: var(--bg-2);
+  position: relative;
+}
+
+.project-card.featured::after {
+  content: "FEATURED_PROJECT_01";
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  font-weight: 700;
 }
 
 .project-card.featured .project-title {
-  font-size: 2.2rem;
-  padding: 0 2.5rem 1.5rem 2.5rem;
+  font-size: 3rem !important;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  max-width: 800px;
+  padding: 0 !important;
 }
 
 .project-card.featured .project-description {
-  padding: 0 2.5rem 2.5rem 2.5rem;
-  max-width: 480px;
-  font-size: 1.1rem;
+  font-size: 1.25rem !important;
+  max-width: 650px;
+  line-height: 1.6;
+  padding: 0 !important;
 }
 
-@media (max-width: 1024px) {
+.project-card.featured .project-tags {
+  margin-top: 3rem;
+  padding: 0 !important;
+}
+
+@media (max-width: 768px) {
   .project-card.featured {
-    flex-direction: column !important;
+    padding: 2.5rem 1.5rem;
     min-height: auto;
+  }
+  .project-card.featured .project-title {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .project-card.featured .project-card-header,
+  .project-card.featured .project-title,
+  .project-card.featured .project-description {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  
+  .project-card.featured .project-title {
+    font-size: 1.6rem;
   }
 }
 

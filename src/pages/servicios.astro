@@ -143,6 +143,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-left: 2rem; /* Align with systemic vertical line */
   }
 
+  @media (max-width: 768px) {
+    .integration-flow {
+      margin-left: 1rem;
+    }
+    .integration-step {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 2rem 0;
+    }
+    .step-meta {
+      min-width: unset;
+    }
+  }
+
   .integration-step {
     display: flex;
     gap: 3rem;
