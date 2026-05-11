@@ -12,7 +12,7 @@ images:
 
 ## Sobre el Proyecto
 
-Sistema integral desarrollado a medida para una **distribuidora real en San Luis**, enfocado en la automatización completa de la cadena logística. Este software reemplazó procesos manuales en papel por un "engine" robusto que centraliza la operación del negocio.
+Sistema integral desarrollado a medida para una **distribuidora real en Argentina**, enfocado en la automatización completa de la cadena logística. Este software reemplazó procesos manuales en papel por un "engine" robusto que centraliza la operación del negocio.
 
 ## Impacto real
 
