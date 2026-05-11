@@ -7,28 +7,51 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate } = Astro.props;
 ---
 
+<style>
+	.tech-tags-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.6rem;
+		margin-top: 1rem;
+	}
+
+	.blog-meta {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-top: 0.5rem;
+	}
+</style>
+
 <BaseLayout title={title} description={description}>
-	<article class="prose">
-		<a href="/blog" style="font-size: 0.9rem; color: var(--text-muted);">← Volver a todos los artículos</a>
-		<h1 style="color: var(--text-main); font-size: 2.2rem; margin-top: 1rem; margin-bottom: 0.5rem;">{title}</h1>
-		<div style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem;">
-			<time datetime={pubDate.toISOString()}>
-				{pubDate.toLocaleDateString('es-ES', {
-					year: 'numeric',
-					month: 'short',
-					day: 'numeric',
-				})}
-			</time>
-			{updatedDate && (
-				<span style="font-style: italic;">
-					(Actualizado el {updatedDate.toLocaleDateString('es-ES', {
+	<article class="prose stagger project-detail-article">
+		<a href="/blog" class="back-link">
+			← Volver al blog
+		</a>
+
+		<header class="project-header">
+			<h1 class="project-detail-title">{title}</h1>
+			<div class="blog-meta">
+				<time datetime={pubDate.toISOString()} class="date-badge">
+					{pubDate.toLocaleDateString('es-ES', {
 						year: 'numeric',
-						month: 'short',
+						month: 'long',
 						day: 'numeric',
-					})})
-				</span>
-			)}
-		</div>
+					})}
+				</time>
+				{updatedDate && (
+					<span class="date-badge" style="font-style: italic;">
+						· Actualizado: {updatedDate.toLocaleDateString('es-ES', {
+							year: 'numeric',
+							month: 'short',
+							day: 'numeric',
+						})}
+					</span>
+				)}
+			</div>
+		</header>
+
 		<slot />
 	</article>
 </BaseLayout>

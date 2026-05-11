@@ -2,187 +2,278 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Servicios | Felipe Reynoso" description="Servicios de desarrollo de módulos Odoo a medida y aplicaciones web con Python.">
-	<section id="services-header" style="margin-bottom: 3rem;">
-		<h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-main);">Servicios de Apps Web y Módulos Odoo</h1>
-		<p style="font-size: 1.15rem; color: var(--text-muted); max-width: 620px; line-height: 1.8;">
-			Módulos Odoo a medida y aplicaciones web pequeñas/medianas para mejorar procesos y ahorrar tiempo.
-		</p>
-	</section>
+<BaseLayout
+  title="Servicios | Felipe Reynoso"
+  description="Servicios de desarrollo de módulos Odoo a medida y aplicaciones web con Python."
+>
+  <!-- Header de página -->
+  <section id="services-header" style="margin-bottom: 4rem;">
+    <span class="section-label">Especialización</span>
+    <h1 style="font-size: clamp(2.2rem, 6vw, 3.5rem); font-weight: 800; letter-spacing: -0.05em; margin-bottom: 1.5rem; color: var(--text); line-height: 1;">
+      Servicios de <span class="outline">Arquitectura</span><br/>y Módulos Odoo
+    </h1>
+    <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 560px; line-height: 1.8;">
+      Soluciones especializadas en automatización de procesos y optimización de infraestructura de datos.
+    </p>
+  </section>
 
-	<!-- Tarjetas de servicios -->
-	<section id="services-cards" style="margin-bottom: 3rem;">
-		<div class="services-grid">
-			<!-- Tarjeta: Módulos Odoo -->
-			<article class="service-card">
-				<div class="service-card-icon">
-					<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M12 2L2 7l10 5 10-5-10-5z"/>
-						<path d="M2 17l10 5 10-5"/>
-						<path d="M2 12l10 5 10-5"/>
-					</svg>
-				</div>
-				<h3 class="service-card-title">Módulos Odoo a medida</h3>
-				<p class="service-card-desc">
-					Creo módulos personalizados que se integran a tu flujo de trabajo. Desde la idea hasta producción, todo a medida.
-				</p>
-				<ul class="service-features">
-					<li>Relevamiento y análisis de requerimientos</li>
-					<li>Desarrollo y personalización de módulos</li>
-					<li>Integración con módulos existentes</li>
-					<li>Reportes personalizados (PDF, Excel)</li>
-					<li>Testing completo y deploy</li>
-					<li>Documentación y capacitación</li>
-				</ul>
-				<div class="project-tags">
-					<span class="tag">Odoo v17</span>
-					<span class="tag">Odoo v18</span>
-					<span class="tag">Odoo v19</span>
-					<span class="tag">Python</span>
-					<span class="tag">XML</span>
-					<span class="tag">PostgreSQL</span>
-				</div>
-			</article>
+  <!-- Tarjetas de servicios -->
+  <section id="services-cards" style="margin-bottom: 5rem;">
+    <div class="services-grid stagger">
+      <!-- Módulos Odoo -->
+      <article class="service-card featured" data-index="01">
+        <div class="service-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 class="service-card-title">Módulos Odoo a medida</h3>
+        <p class="service-card-desc">
+          Ecosistema personalizado para Odoo 17, 18 y 19. Desde la lógica de negocio hasta el despliegue final.
+        </p>
+        <ul class="service-features">
+          <li>Relevamiento profundo de procesos</li>
+          <li>Desarrollo de módulos core y UI</li>
+          <li>Integración con módulos oficiales</li>
+          <li>Reportes dinámicos (QWeb / PDF)</li>
+          <li>Optimización de flujos de trabajo</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">XML</span>
+        </div>
+      </article>
 
-			<!-- Tarjeta: Apps Web -->
-			<article class="service-card">
-				<div class="service-card-icon">
-					<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-						<polyline points="16 18 22 12 16 6"/>
-						<polyline points="8 6 2 12 8 18"/>
-						<line x1="12" y1="2" x2="12" y2="22" opacity="0.3"/>
-					</svg>
-				</div>
-				<h3 class="service-card-title">Aplicaciones Web</h3>
-				<p class="service-card-desc">
-					Desarrollo aplicaciones web pequeñas y medianas con backend robusto en Python. Paneles, dashboards, APIs y automatizaciones.
-				</p>
-				<ul class="service-features">
-					<li>APIs REST con Flask y FastAPI</li>
-					<li>Protección de endpoints y autenticación JWT</li>
-					<li>Paneles administrativos y dashboards</li>
-					<li>Integración con servicios externos y APIs de terceros</li>
-					<li>Base de datos relacional y ORM</li>
-					<li>Deploy y configuración de servidor</li>
-				</ul>
-				<div class="project-tags">
-					<span class="tag">Python</span>
-					<span class="tag">Flask</span>
-					<span class="tag">FastAPI</span>
-					<span class="tag">JWT</span>
-					<span class="tag">REST API</span>
-					<span class="tag">SQLAlchemy</span>
-				</div>
-			</article>
+      <!-- Apps Web -->
+      <article class="service-card" data-index="02">
+        <div class="service-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+            <line x1="12" y1="2" x2="12" y2="22" opacity="0.3"/>
+          </svg>
+        </div>
+        <h3 class="service-card-title">Aplicaciones Web</h3>
+        <p class="service-card-desc">
+          Desarrollo de microservicios y plataformas backend con arquitecturas limpias y seguras.
+        </p>
+        <ul class="service-features">
+          <li>APIs REST con Flask & FastAPI</li>
+          <li>Seguridad JWT y OAuth</li>
+          <li>Dashboards de control</li>
+          <li>Webhooks y automatizaciones</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Flask</span>
+          <span class="tag">FastAPI</span>
+        </div>
+      </article>
 
-			<!-- Tarjeta: Migraciones y Soporte -->
-			<article class="service-card">
-				<div class="service-card-icon">
-					<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-					</svg>
-				</div>
-				<h3 class="service-card-title">Migraciones, optimización y soporte</h3>
-				<p class="service-card-desc">
-					Actualizo tu sistema Odoo a versiones más recientes, optimizo rendimiento y ofrezco soporte técnico continuo.
-				</p>
-				<ul class="service-features">
-					<li>Migración entre versiones de Odoo</li>
-					<li>Optimización de queries y rendimiento</li>
-					<li>Corrección de bugs y mantenimiento</li>
-					<li>Auditoría de código y seguridad</li>
-					<li>Soporte por horas o mensual</li>
-				</ul>
-				<div class="project-tags">
-					<span class="tag">Migración</span>
-					<span class="tag">Performance</span>
-					<span class="tag">Soporte</span>
-					<span class="tag">PostgreSQL</span>
-				</div>
-			</article>
-		</div>
-	</section>
+      <!-- Migraciones y Soporte -->
+      <article class="service-card" data-index="03">
+        <div class="service-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <h3 class="service-card-title">Optimización & Soporte</h3>
+        <p class="service-card-desc">
+          Mantenimiento evolutivo y mejora de rendimiento para sistemas en producción.
+        </p>
+        <ul class="service-features">
+          <li>Migraciones Enterprise</li>
+          <li>Optimización de bases de datos</li>
+          <li>Corrección de lógica compleja</li>
+          <li>Soporte técnico puntual</li>
+        </ul>
+      </article>
+    </div>
+  </section>
 
-	<!-- Cómo trabajo -->
-	<section id="process" style="margin-bottom: 3rem;">
-		<h2 class="section-title">Cómo trabajo</h2>
-		<div class="process-steps">
-			<div class="process-step">
-				<span class="process-step-number">01</span>
-				<div>
-					<h4 class="process-step-title">Relevamiento</h4>
-					<p class="process-step-desc">Escucho tu necesidad, analizo el contexto y defino alcance junto con vos.</p>
-				</div>
-			</div>
-			<div class="process-step">
-				<span class="process-step-number">02</span>
-				<div>
-					<h4 class="process-step-title">Propuesta y presupuesto</h4>
-					<p class="process-step-desc">Te envio una propuesta inicial con tiempos y costo estimado. Consulta gratuita y sin compromiso.</p>
-				</div>
-			</div>
-			<div class="process-step">
-				<span class="process-step-number">03</span>
-				<div>
-					<h4 class="process-step-title">Desarrollo</h4>
-					<p class="process-step-desc">Desarrollo iterativo con updates periódicos para que veas el avance en cada etapa.</p>
-				</div>
-			</div>
-			<div class="process-step">
-				<span class="process-step-number">04</span>
-				<div>
-					<h4 class="process-step-title">Entrega y soporte</h4>
-					<p class="process-step-desc">Testing completo, deploy en tu entorno, documentación y capacitación incluida.</p>
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- Cómo trabajo -->
+  <section id="process" style="margin-bottom: 5rem;">
+    <span class="section-label">Metodología</span>
+    <h2 class="section-title">Integración de <span class="outline">Sistemas</span></h2>
+    
+    <div class="system-integration-flow">
+      <div class="integration-step">
+        <div class="step-meta">
+          <span class="step-version">v1.0</span>
+          <span class="step-id">DISC_01</span>
+        </div>
+        <div class="step-content">
+          <h3 class="step-title">Relevamiento de Campo</h3>
+          <p>Análisis exhaustivo de la operativa actual para detectar cuellos de botella y redundancias de datos. Escucho tu necesidad y defino el alcance real junto con vos.</p>
+        </div>
+      </div>
 
-	<!-- Stack Tecnológico -->
-	<section id="tech-stack" style="margin-bottom: 4rem;">
-		<h2 class="section-title">Especialización Técnica</h2>
-		<div class="tech-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem;">
-			<div class="tech-item" style="background: var(--surface-color); border: 1px solid var(--border-color); padding: 1rem; border-radius: 10px; text-align: center;">
-				<span style="display: block; font-weight: 600; color: var(--text-accent); margin-bottom: 0.25rem;">Odoo</span>
-				<span style="font-size: 0.85rem; color: var(--text-muted);">ERP / Framework</span>
-			</div>
-			<div class="tech-item" style="background: var(--surface-color); border: 1px solid var(--border-color); padding: 1rem; border-radius: 10px; text-align: center;">
-				<span style="display: block; font-weight: 600; color: var(--text-accent); margin-bottom: 0.25rem;">Python</span>
-				<span style="font-size: 0.85rem; color: var(--text-muted);">Lenguaje Core</span>
-			</div>
-			<div class="tech-item" style="background: var(--surface-color); border: 1px solid var(--border-color); padding: 1rem; border-radius: 10px; text-align: center;">
-				<span style="display: block; font-weight: 600; color: var(--text-accent); margin-bottom: 0.25rem;">FastAPI / Flask</span>
-				<span style="font-size: 0.85rem; color: var(--text-muted);">Backend Web</span>
-			</div>
-			<div class="tech-item" style="background: var(--surface-color); border: 1px solid var(--border-color); padding: 1rem; border-radius: 10px; text-align: center;">
-				<span style="display: block; font-weight: 600; color: var(--text-accent); margin-bottom: 0.25rem;">PostgreSQL</span>
-				<span style="font-size: 0.85rem; color: var(--text-muted);">Bases de Datos</span>
-			</div>
-			<div class="tech-item" style="background: var(--surface-color); border: 1px solid var(--border-color); padding: 1rem; border-radius: 10px; text-align: center;">
-				<span style="display: block; font-weight: 600; color: var(--text-accent); margin-bottom: 0.25rem;">Docker</span>
-				<span style="font-size: 0.85rem; color: var(--text-muted);">Contenerización</span>
-			</div>
-			<div class="tech-item" style="background: var(--surface-color); border: 1px solid var(--border-color); padding: 1rem; border-radius: 10px; text-align: center;">
-				<span style="display: block; font-weight: 600; color: var(--text-accent); margin-bottom: 0.25rem;">Git / GitHub</span>
-				<span style="font-size: 0.85rem; color: var(--text-muted);">Control de Versiones</span>
-			</div>
-		</div>
-	</section>
+      <div class="integration-step">
+        <div class="step-meta">
+          <span class="step-version">v2.0</span>
+          <span class="step-id">ARCH_02</span>
+        </div>
+        <div class="step-content">
+          <h3 class="step-title">Arquitectura & Propuesta</h3>
+          <p>Definición del modelo de datos y diseño de los módulos necesarios. Te envío una propuesta inicial con tiempos y costo estimado. Consulta gratuita y sin compromiso.</p>
+        </div>
+      </div>
 
-	<!-- CTA de Contacto -->
-	<section id="contact">
-		<div class="cta-contact">
-			<div class="cta-contact-content">
-				<h3 class="cta-contact-title">Contame tu proyecto y te envio propuesta + presupuesto</h3>
-				<p class="cta-contact-desc">Te respondo en menos de 48 hs con alcance, tiempos y costo estimado.</p>
-				<p class="cta-contact-trust">Consultas gratis · Sin compromiso · Sin spam</p>
-				<div class="cta-contact-actions">
-					<a href="mailto:felipereynoso171@gmail.com?subject=Consulta%20-%20Servicios%20Web%2FOdoo&body=Hola%20Felipe%2C%20me%20interesa%20consultar%20sobre%3A%0A%0A" class="btn btn-primary">
-						<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
-						Quiero mi presupuesto
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
+      <div class="integration-step">
+        <div class="step-meta">
+          <span class="step-version">v3.0</span>
+          <span class="step-id">PROD_03</span>
+        </div>
+        <div class="step-content">
+          <h3 class="step-title">Desarrollo & QA</h3>
+          <p>Desarrollo iterativo con updates periódicos. Testing completo, deploy en tu entorno, documentación y capacitación incluida para asegurar el rendimiento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<style>
+  .system-integration-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 800px;
+    margin-left: 2rem; /* Align with systemic vertical line */
+  }
+
+  .integration-step {
+    display: flex;
+    gap: 3rem;
+    padding: 3rem 0;
+    border-bottom: 1px dashed var(--border-strong);
+  }
+
+  .integration-step:last-child {
+    border-bottom: none;
+  }
+
+  .step-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 100px;
+  }
+
+  .step-version {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .step-id {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--text-faint);
+  }
+
+  .step-title {
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .step-content p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 550px;
+  }
+
+  @media (max-width: 768px) {
+    .integration-step {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 2rem 0;
+    }
+    .system-integration-flow {
+      margin-left: 0;
+    }
+  }
+</style>
+
+  <!-- Stack Tecnológico -->
+  <section id="tech-stack" style="margin-bottom: 5rem;">
+    <span class="section-label">Infraestructura</span>
+    <h2 class="section-title">Especialización <span class="outline">Técnica</span></h2>
+    <div class="tech-grid">
+      <div class="tech-item">
+        <span class="tech-item-name">Odoo</span>
+        <span class="tech-item-label">ERP / Framework</span>
+      </div>
+      <div class="tech-item">
+        <span class="tech-item-name">Python</span>
+        <span class="tech-item-label">Lenguaje Core</span>
+      </div>
+      <div class="tech-item">
+        <span class="tech-item-name">FastAPI / Flask</span>
+        <span class="tech-item-label">Backend Web</span>
+      </div>
+      <div class="tech-item">
+        <span class="tech-item-name">PostgreSQL</span>
+        <span class="tech-item-label">Bases de Datos</span>
+      </div>
+      <div class="tech-item">
+        <span class="tech-item-name">Docker</span>
+        <span class="tech-item-label">Contenerización</span>
+      </div>
+      <div class="tech-item">
+        <span class="tech-item-name">Git / GitHub</span>
+        <span class="tech-item-label">Control de Versiones</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resultados / Testimonials -->
+  <section id="testimonials" class="testimonials-section">
+    <span class="section-label">Validación</span>
+    <h2 class="section-title">Resultados en <span class="outline">Entorno Real</span></h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"La digitalización del proceso de remitos redujo el tiempo administrativo a menos de la mitad. El control de stock automático nos dio la precisión que necesitábamos."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JS</div>
+          <div>
+            <span class="testimonial-name">JS Distribuciones</span>
+            <span class="testimonial-role">Distribuidora Logística · Argentina</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA de Contacto -->
+  <section id="contact">
+    <div class="cta-contact">
+      <h3 class="cta-contact-title">¿Listo para escalar tu infraestructura?</h3>
+      <p class="cta-contact-desc">Analizo tu proyecto y te envío una propuesta técnica + presupuesto en menos de 48hs.</p>
+      
+      <div class="cta-contact-actions">
+        <a
+          href="mailto:felipereynoso171@gmail.com?subject=Consulta%20-%20Servicios%20Web%2FOdoo&body=Hola%20Felipe%2C%20me%20interesa%20consultar%20sobre%3A%0A%0A"
+          class="btn btn-primary"
+          id="servicios-contact-btn"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right: 10px;">
+            <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+          </svg>
+          Solicitar Presupuesto Técnico
+        </a>
+      </div>
+
+      <div class="cta-contact-trust">
+        <span>✓ Consultas Gratis</span>
+        <span>✓ Sin Compromiso</span>
+        <span>✓ Sin Spam</span>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

@@ -1,0 +1,197 @@
+---
+---
+
+<div class="terminal-container">
+  <div class="terminal-header">
+    <div class="terminal-dots">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </div>
+    <div class="terminal-title">felipe — bash — 80x24</div>
+  </div>
+  <div class="terminal-body">
+    <div class="terminal-line">
+      <span class="prompt">guest@portfolio:~$</span> <span class="typing">whois felipe</span>
+    </div>
+    <div class="terminal-response">
+      <p class="response-title">Felipe Reynoso</p>
+      <p class="response-role">Ssr. Backend Developer & Odoo Specialist</p>
+      <p class="response-stat">Exp: +2 years professional dev</p>
+      <p class="response-stat">Loc: Argentina</p>
+    </div>
+    <div class="terminal-line delay-1">
+      <span class="prompt">guest@portfolio:~$</span> <span class="typing-2">ssh production --list-impact</span>
+    </div>
+    <div class="terminal-response delay-1">
+      <ul class="stats-list">
+        <li><span>JS Distribuciones</span>: <span class="accent-text">Remitos &lt; 120s</span></li>
+        <li><span>Stock Sync</span>: <span class="accent-text">100% Precision</span></li>
+        <li><span>Database</span>: <span class="accent-text">SQLite + SQLAlchemy</span></li>
+      </ul>
+    </div>
+    <div class="terminal-line delay-2">
+      <span class="prompt">guest@portfolio:~$</span> <span class="cursor">_</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .terminal-container {
+    width: 100%;
+    max-width: 640px;
+    background: #08070b;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    margin: 2rem 0;
+    font-family: var(--font-mono);
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+
+  [data-theme="light"] .terminal-container {
+    border: 2px solid #1a1920;
+    box-shadow: 8px 8px 0 var(--border-strong);
+  }
+
+  .terminal-header {
+    background: #1a1920;
+    padding: 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .terminal-dots {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .red { background: #ff5f56; }
+  .yellow { background: #ffbd2e; }
+  .green { background: #27c93f; }
+
+  .terminal-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 0.65rem;
+    color: var(--text-faint);
+    margin-right: 2.5rem; /* center offset */
+  }
+
+  .terminal-body {
+    padding: 1.25rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #dedede;
+  }
+
+  .terminal-line {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .prompt {
+    color: var(--accent);
+    opacity: 0.8;
+  }
+
+  .terminal-response {
+    margin-bottom: 1.25rem;
+    padding-left: 0.5rem;
+    border-left: 1px solid var(--border);
+    animation: fadeIn 0.3s ease forwards;
+    opacity: 0;
+  }
+
+  .response-title {
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.2rem;
+  }
+
+  .response-role {
+    color: var(--accent);
+    font-size: 0.75rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .response-stat {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .stats-list {
+    list-style: none;
+    padding: 0;
+    font-size: 0.75rem;
+  }
+
+  .accent-text {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* Typing Animations */
+  .typing {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--accent);
+    animation: typing 0.8s steps(12) forwards;
+    animation-delay: 0.3s;
+  }
+
+  .typing-2 {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+    animation: typing 0.8s steps(25) forwards;
+    animation-delay: 1.6s;
+  }
+
+  .delay-1 { animation-delay: 1.4s !important; }
+  .delay-2 { animation-delay: 3s !important; }
+
+  .terminal-response.delay-1 { 
+    animation-delay: 2.5s;
+    border-left: 1px solid var(--accent);
+    padding-left: 1rem;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .cursor {
+    animation: blink 1s step-end infinite;
+    color: var(--accent);
+  }
+
+  @keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  @media (max-width: 600px) {
+    .terminal-container {
+      font-size: 0.75rem;
+    }
+  }
+</style>

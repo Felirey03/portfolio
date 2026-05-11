@@ -4,6 +4,7 @@ description: "Panel de análisis y visualización de datos en tiempo real para m
 tags: ["Odoo", "Python", "Data", "Dashboard"]
 isExternal: false
 order: 3
+draft: true
 githubLink: "https://github.com/Felirey03/dashboard_ejecutivo"
 images:
   - "/projects/dashboard.jpg"

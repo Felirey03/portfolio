@@ -5,17 +5,79 @@ interface Props {
   tags: string[];
   link: string;
   isExternal?: boolean;
+  dataIndex?: string;
+  isFeatured?: boolean;
 }
 
-const { title, description, tags, link, isExternal = false } = Astro.props;
+const { title, description, tags, link, isExternal = false, dataIndex, isFeatured = false } = Astro.props;
 ---
 
-<a href={link} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined} style="text-decoration: none; color: inherit; display: block; height: 100%;">
-  <article class="project-card">
+<a
+  href={link}
+  target={isExternal ? "_blank" : undefined}
+  rel={isExternal ? "noopener noreferrer" : undefined}
+  class="project-card-link"
+>
+  <article class={`project-card ${isFeatured ? 'featured' : ''}`} data-index={dataIndex}>
+    <div class="project-card-header">
+      <div class="project-card-meta">
+        <span class="project-status">STATUS // PRODUCTION</span>
+        {dataIndex && <span class="project-ref">REF://{dataIndex}</span>}
+      </div>
+      {isExternal && (
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="external-icon">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      )}
+    </div>
     <h3 class="project-title">{title}</h3>
     <p class="project-description">{description}</p>
     <div class="project-tags">
-      {tags.map((tag) => <span class="tag">{tag}</span>)}
+      {tags.map((tag) => <span class="tag">REF://{tag}</span>)}
     </div>
   </article>
 </a>
+
+<style>
+  .project-card-link {
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    height: 100%;
+  }
+
+  .project-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .project-status {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+    font-weight: 600;
+  }
+
+  .project-ref {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    color: var(--text-faint);
+    letter-spacing: 0.05em;
+  }
+
+  .external-icon {
+    opacity: 0.4;
+    vertical-align: middle;
+  }
+</style>

@@ -1,10 +1,9 @@
 ---
 title: "JS Distribuciones"
-description: "Sistema integral y backend para la gestión logística de distribuidora."
-tags: ["Python", "Backend", "API", "Flask", "SQLAlchemy"]
+description: "Motor logístico a medida para distribución a gran escala. Digitalización de remitos (<120s), control de inventario inteligente y gestión de clientes."
+tags: ["Python", "Flask", "SQLAlchemy", "PostgreSQL", "Backend"]
 isExternal: false
 order: 1
-githubLink: "https://github.com/Felirey03/jsdistribuciones"
 images:
   - "/projects/jsdistribuciones.jpg"
   - "/projects/jsdistribuciones-2.jpg"
@@ -13,4 +12,14 @@ images:
 
 ## Sobre el Proyecto
 
-Sistema backend desarrollado para digitalizar por completo la operación de una distribuidora real. Reemplazó procesos manuales en papel con una plataforma centralizada para gestión de stock, clientes y remitos. Construido con Python, Flask y SQLAlchemy, con foco en endpoints robustos y consultas optimizadas para soportar la operativa diaria.
+Sistema integral desarrollado a medida para una **distribuidora real en San Luis**, enfocado en la automatización completa de la cadena logística. Este software reemplazó procesos manuales en papel por un "engine" robusto que centraliza la operación del negocio.
+
+## Impacto real
+
+- **Emisión de remitos en < 120 segundos** — optimización del flujo de carga que permite al equipo operativo ser más eficiente en el día a día.
+- **Stock automatizado** — el sistema descuenta automáticamente las unidades de inventario con cada movimiento, asegurando una precisión del 100% en la bodega.
+- **Gestión masiva de clientes** — búsqueda instantánea y gestión de perfiles para miles de registros, facilitando el seguimiento de historial y cobros.
+
+## Stack técnico
+
+Construido íntegramente con **Python** y **Flask**. Utiliza **SQLAlchemy** como ORM para una gestión eficiente de la base de datos PostgreSQL, garantizando integridad de datos y escalabilidad para el crecimiento de la distribuidora.

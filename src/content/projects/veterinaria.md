@@ -1,7 +1,7 @@
 ---
-title: "Sistema de Veterinaria"
-description: "Plataforma de gestión clínica y administrativa para centros veterinarios. Integrada en Odoo 17."
-tags: ["Odoo", "Python", "ERP", "PostgreSQL"]
+title: "Solución de Gestión Veterinaria"
+description: "Ecosystem completo para clínicas: historia clínica SOAP, gestión de turnos y planes sanitarios automatizados en Odoo 17."
+tags: ["Odoo", "Vertical Solution", "Python", "ERP"]
 isExternal: false
 order: 2
 githubLink: "https://github.com/Felirey03/veterinariaOdoo"
@@ -11,9 +11,9 @@ images:
   - "/projects/veterinaria-4.png"
 ---
 
-## Sobre el Proyecto
+## Sobre la Solución
 
-Módulo profesional desarrollado para **Odoo 17** enfocado en la digitalización integral de clínicas veterinarias. Este sistema no solo gestiona la parte administrativa, sino que introduce un flujo de trabajo clínico optimizado para médicos veterinarios.
+Software vertical desarrollado para la transformación digital de clínicas veterinarias. No es solo un módulo; es una herramienta de grado profesional que optimiza el flujo médico y administrativo bajo un único entorno escalable en **Odoo 17**.
 
 ### Características Principales
 
