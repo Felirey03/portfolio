@@ -53,6 +53,7 @@ const projects = (await getCollection('projects'))
 	<section id="projects">
 		<span class="section-label">Engineering</span>
 		<h2 class="section-title">Soluciones de <span class="outline">Impacto Real</span></h2>
+		<p class="section-description text-center">Software robusto diseñado para digitalizar operaciones y maximizar la eficiencia.</p>
 		
 		<div class="projects-grid stagger">
 			{projects.map((project, index) => (
@@ -71,9 +72,10 @@ const projects = (await getCollection('projects'))
 
 	<!-- ════════════════════════════ BLOG ════════════════════════════ -->
 	<section id="recent-posts">
-		<span class="section-label">Escritura</span>
+		<span class="section-label">Escribiendo // Blog</span>
 		<h2 class="section-title">Últimos <span class="outline">Artículos</span></h2>
-		<div class="post-list">
+		<p class="section-description">Notas sobre ingeniería de software, arquitectura de sistemas y el ecosistema de Odoo.</p>
+		<div class="post-list stagger">
 			{posts.length > 0 ? (
 				posts.map((post) => (
 					<div class="post-item">

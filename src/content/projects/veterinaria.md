@@ -3,7 +3,7 @@ title: "Solución de Gestión Veterinaria"
 description: "Ecosystem completo para clínicas: historia clínica SOAP, gestión de turnos y planes sanitarios automatizados en Odoo 17."
 tags: ["Odoo", "Vertical Solution", "Python", "ERP"]
 isExternal: false
-order: 2
+order: 1
 githubLink: "https://github.com/Felirey03/veterinariaOdoo"
 images:
   - "/projects/veterinaria-2.png"

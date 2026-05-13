@@ -3,7 +3,7 @@ title: "JS Distribuciones"
 description: "Motor logístico a medida para distribución a gran escala. Digitalización de remitos (<120s), control de inventario inteligente y gestión de clientes."
 tags: ["Python", "Flask", "SQLAlchemy", "PostgreSQL", "Backend"]
 isExternal: false
-order: 1
+order: 2
 images:
   - "/projects/jsdistribuciones.jpg"
   - "/projects/jsdistribuciones-2.jpg"
