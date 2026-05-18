@@ -69,6 +69,7 @@
 /* ─── Base ─────────────────────────────────── */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -84,6 +85,7 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
   
   /* Technical Blueprint Grid Background */
   background-image: 
@@ -535,46 +537,19 @@ main::before {
 }
 
 .project-title {
-  padding: 0 1.5rem 1rem 1.5rem;
+  padding: 0 1.5rem 0.5rem 1.5rem;
   font-size: 1.5rem;
-  font-weight: 900;
-  line-height: 1.1;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text);
+  letter-spacing: -0.01em;
 }
 
 .project-description {
   padding: 0 1.5rem 1.5rem 1.5rem;
-  flex-grow: 1;
-}
-
-.project-tags {
-  padding: 1.25rem 1.75rem;
-  background: var(--bg-3);
-  border-top: 2px dashed var(--border-strong);
-  margin-top: auto;
-}
-
-[data-theme="light"] .project-tags {
-  border-top-width: 1px;
-}
-
-.project-card > * {
-  position: relative;
-  z-index: 1;
-}
-
-.project-title {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.01em;
-  color: var(--text);
-}
-
-.project-description {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.6;
-  margin-bottom: 1.25rem;
   flex-grow: 1;
 }
 
@@ -1233,13 +1208,45 @@ footer {
 /* ─── Tech Stack ────────────────────────────── */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
   gap: 2rem;
   margin-bottom: 5rem;
 }
 
+.projects-grid.only-two {
+  grid-template-columns: 1.8fr 1.2fr;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .projects-grid.only-two {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projects-grid.only-two .project-card-link:nth-child(1) {
+  grid-column: auto;
+}
+
+.projects-grid.only-two .project-card-link:nth-child(2) {
+  grid-column: auto;
+  justify-self: stretch;
+  max-width: none;
+}
+
+.projects-grid.only-two .project-card-link:nth-child(2) .project-card {
+  background: var(--bg-hover);
+  border-style: dashed;
+  border-width: 2px;
+  height: 100%;
+}
+
 .project-card-link.featured {
   grid-column: 1 / -1;
+}
+
+.projects-grid.only-two .project-card-link.featured {
+  grid-column: auto;
 }
 
 .project-card.featured {
@@ -1288,11 +1295,18 @@ footer {
 
 @media (max-width: 768px) {
   .project-card.featured {
-    padding: 2.5rem 1.5rem;
+    padding: 1.5rem;
     min-height: auto;
   }
   .project-card.featured .project-title {
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 1rem;
+  }
+  .project-card.featured .project-description {
+    font-size: 1.05rem !important;
+  }
+  .project-card.featured .project-tags {
+    margin-top: 1.5rem;
   }
 }
 

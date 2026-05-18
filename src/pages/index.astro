@@ -55,7 +55,7 @@ const projects = (await getCollection('projects'))
 		<h2 class="section-title">Soluciones de <span class="outline">Impacto Real</span></h2>
 		<p class="section-description text-center">Software robusto diseñado para digitalizar operaciones y maximizar la eficiencia.</p>
 		
-		<div class="projects-grid stagger">
+		<div class={`projects-grid stagger ${projects.length === 2 ? 'only-two' : ''}`}>
 			{projects.map((project, index) => (
 				<ProjectCard
 					title={project.data.title}
