@@ -1496,6 +1496,12 @@ footer {
     flex-wrap: wrap;
   }
 
+  .btn {
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
+
   .container {
     margin: 1rem auto;
     border-radius: var(--radius-md);
@@ -1505,6 +1511,13 @@ footer {
     max-width: 100%;
     padding: 3rem 1.5rem;
     margin: 5rem 0 2rem 0;
+  }
+
+  .cta-contact .btn-primary {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    max-width: 320px;
   }
 
   .hero-title {
