@@ -36,11 +36,11 @@ cd portfolio
 ```
 2. Instala dependencias del paquete
 ```bash
-npm install
+pnpm install
 ```
 3. Levanta el servidor local de desarrollo
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 El servidor local normalmente correrá sobre la dirección por defecto del puerto 4321, accesible en entorno puro: `http://localhost:4321/`
