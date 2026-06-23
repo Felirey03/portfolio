@@ -30,4 +30,5 @@ A mi me pasa, que como no tengo experiencia desarrollando con Next.JS (la voy te
 Si bien, el desarrollo se hace muy rapido en comparación, estos inconvenientes los vamos a tener siempre.
 Algunas soluciones, fueron buscar SKILLs, herramientas como Ponytail, ECC (Everything for Claude Code). Algo ayudaron, pero el problema persiste y surgieron otros.
 
-Mi recomendacion es tener estudiado los fundamentos y conocimientos acerca del lenguaje, framework o herramienta que estemos utilizando. Pidamos siempre seguimiento de codigo, realizar test. Busca[...]
+Mi recomendacion es tener estudiado los fundamentos y conocimientos acerca del lenguaje, framework o herramienta que estemos utilizando. Pidamos siempre seguimiento de codigo, realizar test.
+Saludos, Felipe.
