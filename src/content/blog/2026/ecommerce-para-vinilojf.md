@@ -25,10 +25,10 @@ Para este proyecto en específico, me decidí a probar el vicecoding. Le dí una
 Este plan reune IAs de código abierto, cada una con su costo y su capacidad. Entre ellas las más conocidas ahora, Deepseek v4 y GLM 5.2, entre otras.
 
 Para cualquiér desarrollador que tenga experiencia en Django y Next.js, alcanza y sobra. Por el contrario, para alguien que no tiene experiencia, va a tener problemas.
-No es que la IA por ser de código abierto sea mala, seguramente pasaría lo mismo con Claude, GPT, Gemini... Pero, es díficil que los modelos no se pierdan, toquen codigo que no deben tocar, no [...]
+No es que la IA por ser de código abierto sea mala, seguramente pasaría lo mismo con Claude, GPT, Gemini... Pero, es díficil que los modelos no se pierdan, toquen codigo que no deben tocar, no solucionan tu problema, y demás.
 A mi me pasa, que como no tengo experiencia desarrollando con Next.JS (la voy teniendo a medida que el proyecto avanza), pero te hace renegar mas que si uno estuviera escribiendo codigo sin IA.
 Si bien, el desarrollo se hace muy rapido en comparación, estos inconvenientes los vamos a tener siempre.
 Algunas soluciones, fueron buscar SKILLs, herramientas como Ponytail, ECC (Everything for Claude Code). Algo ayudaron, pero el problema persiste y surgieron otros.
 
-Mi recomendacion es tener estudiado los fundamentos y conocimientos acerca del lenguaje, framework o herramienta que estemos utilizando. Pidamos siempre seguimiento de codigo, realizar test.
-Saludos, Felipe.
+Mi recomendacion es tener estudiado los fundamentos y conocimientos acerca del lenguaje, framework o herramienta que estemos utilizando. Pidamos siempre seguimiento de codigo, realizar test. Buscar SKILLs que no desconfiguren mucho el pensamiento de la IA.
+Saludos!
