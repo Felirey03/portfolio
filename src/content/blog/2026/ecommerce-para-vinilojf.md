@@ -21,7 +21,7 @@ Django (backend), utilizando PostgreSQL para la Base de datos. Frontend Next.js.
 
 Experiencia desarrollando con IA:
 
-Para este proyecto en específico, me decidí a probar el vicecoding. Le dí una oportunidad al plan Go de Opencode. https://opencode.ai/docs/es/go/
+Para este proyecto en específico, me decidí a probar el vibecoding. Le dí una oportunidad al plan Go de Opencode. https://opencode.ai/docs/es/go/
 Este plan reune IAs de código abierto, cada una con su costo y su capacidad. Entre ellas las más conocidas ahora, Deepseek v4 y GLM 5.2, entre otras.
 
 Para cualquiér desarrollador que tenga experiencia en Django y Next.js, alcanza y sobra. Por el contrario, para alguien que no tiene experiencia, va a tener problemas.
