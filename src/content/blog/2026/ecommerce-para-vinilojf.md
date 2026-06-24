@@ -7,28 +7,46 @@ pubDate: "2026-05-23"
 # Nuevo desarrollo en camino: Ecommerce para ViniloJF
 ## Fecha de actualizacion: 23-05-2026.
 
-Hola a todos!
-Vengo a comentarles de que trata este nuevo proyecto de ecommerce (valga la redundancia).
+Hola a todos. Quiero contarles un poco sobre este nuevo proyecto de e-commerce (valga la redundancia).
 
-Hace unos dias, empece con este proyecto para un negocio de venta de carteleria y vinilos. Especificamente se encargaria de vender carteles
-de distintas variedades, tamaños y precios. 
-Pero, la empresa ya tenia su pagina web, https://www.vinilojf.com.
-Entonces, ¿por qué la desarrollamos de 0?
-Porque queremos tener un control total de todo, sean: productos, ventas, clientes, precios, y MUY IMPORTANTE: gestion de los productos de mercado libre.
+Hace unos días comencé a trabajar en este proyecto para un negocio dedicado a la venta de cartelería y vinilos. En particular, se encargará de comercializar carteles de distintos tamaños, diseños y precios. Sin embargo, la empresa ya contaba con su propio sitio web: https://www.vinilojf.com.
 
-Bien, una vez que entendemos esto, pasamos al stack:
-Django (backend), utilizando PostgreSQL para la Base de datos. Frontend Next.js.
+Entonces, ¿por qué desarrollar una nueva plataforma desde cero?
 
-Experiencia desarrollando con IA:
+La respuesta es simple: buscamos tener un control total sobre todo el ecosistema del negocio. Esto incluye la gestión de productos, ventas, clientes, precios y, algo muy importante, la administración de publicaciones y productos de Mercado Libre.
 
-Para este proyecto en específico, me decidí a probar el vibecoding. Le dí una oportunidad al plan Go de Opencode. https://opencode.ai/docs/es/go/
-Este plan reune IAs de código abierto, cada una con su costo y su capacidad. Entre ellas las más conocidas ahora, Deepseek v4 y GLM 5.2, entre otras.
+Una vez entendido el objetivo, pasemos al stack tecnológico:
 
-Para cualquiér desarrollador que tenga experiencia en Django y Next.js, alcanza y sobra. Por el contrario, para alguien que no tiene experiencia, va a tener problemas.
-No es que la IA por ser de código abierto sea mala, seguramente pasaría lo mismo con Claude, GPT, Gemini... Pero, es díficil que los modelos no se pierdan, toquen codigo que no deben tocar, no solucionan tu problema, y demás.
-A mi me pasa, que como no tengo experiencia desarrollando con Next.JS (la voy teniendo a medida que el proyecto avanza), pero te hace renegar mas que si uno estuviera escribiendo codigo sin IA.
-Si bien, el desarrollo se hace muy rapido en comparación, estos inconvenientes los vamos a tener siempre.
-Algunas soluciones, fueron buscar SKILLs, herramientas como Ponytail, ECC (Everything for Claude Code). Algo ayudaron, pero el problema persiste y surgieron otros.
+* Backend: Django
+* Base de datos: PostgreSQL
+* Frontend: Next.js
 
-Mi recomendacion es tener estudiado los fundamentos y conocimientos acerca del lenguaje, framework o herramienta que estemos utilizando. Pidamos siempre seguimiento de codigo, realizar test. Buscar SKILLs que no desconfiguren mucho el pensamiento de la IA.
-Saludos!
+## Experiencia desarrollando con IA
+
+Para este proyecto decidí darle una oportunidad al llamado *vibecoding*. Probé el plan Go de OpenCode: https://opencode.ai/docs/es/go/.
+
+Este plan reúne distintos modelos de IA de código abierto, cada uno con sus costos y capacidades. Entre los más conocidos actualmente se encuentran DeepSeek V4 y GLM 5.2, entre otros.
+
+Mi conclusión es que, para cualquier desarrollador con experiencia previa en Django y Next.js, estas herramientas son más que suficientes. Sin embargo, para alguien que no domina las tecnologías que está utilizando, pueden aparecer varios problemas.
+
+No creo que sea una cuestión de que las IAs de código abierto sean malas. Probablemente ocurriría algo similar utilizando Claude, GPT o Gemini. Los modelos suelen perder contexto, modificar código que no deberían tocar, proponer soluciones incorrectas o simplemente no resolver el problema planteado.
+
+En mi caso, como no tenía experiencia previa desarrollando con Next.js (aunque la voy adquiriendo a medida que avanza el proyecto), muchas veces terminé renegando más de lo que hubiera renegado escribiendo el código por mi cuenta. Es cierto que el desarrollo avanza mucho más rápido, pero estos inconvenientes siguen estando presentes.
+
+Para intentar mitigarlos, probé distintas soluciones: SKILLs, herramientas como Ponytail y ECC (Everything for Claude Code). Algunas ayudaron bastante, aunque ciertos problemas persistieron y aparecieron otros nuevos.
+
+## Mi recomendación
+
+Estudien los fundamentos de las tecnologías que utilizan. No deleguen completamente el conocimiento en la IA.
+
+Además:
+
+* Soliciten revisiones y seguimiento del código generado.
+* Implementen pruebas siempre que sea posible.
+* Utilicen SKILLs y herramientas que ayuden a mantener el contexto sin alterar demasiado el comportamiento del modelo.
+* No den por correcta una solución únicamente porque fue generada por una IA.
+
+La IA acelera muchísimo el desarrollo, pero sigue siendo una herramienta. Cuanto mayor sea nuestro conocimiento del lenguaje, framework o arquitectura que estamos utilizando, mejores resultados vamos a obtener.
+
+¡Saludos!
+
